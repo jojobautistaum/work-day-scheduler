@@ -14,7 +14,6 @@ function currentHour() {
 
 // Apply color coding for current, previous and future hours
 function checkSchedule (toDos) {
-    console.log("Checked: " + moment().format("HH:MM:SS"));
     for (var i = 0; i < toDos.length; i++) {
         if (currentHour() > i + workStartAt || currentHour() > 17) {
             toDos[i].classList.remove("future", "present");
