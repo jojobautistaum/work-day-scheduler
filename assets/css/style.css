@@ -83,3 +83,6 @@ textarea, i {
   transition: all .3s ease-in-out;
 }
 
+span {
+ font-size: 0;
+}
