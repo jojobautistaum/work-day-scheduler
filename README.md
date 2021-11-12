@@ -23,5 +23,5 @@ This App is used to list "to dos" or activities for the day with work hours betw
 * Screen 2 <br/> ![Page 2](./assets/images/screen2.jpg)
 
 ## Work Day Scheduler App Link
-[Check what is up for today](https://jojobautistaum.github.io/bible-character-quiz/)
+[Check what is up for today](https://jojobautistaum.github.io/work-day-scheduler/)
 
