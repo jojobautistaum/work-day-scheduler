@@ -12,8 +12,10 @@ function currentHour() {
     return moment().hour();
 }
 
-// Apply color coding for current, previous and future hours
+// Update our "to do" list
 function checkSchedule (toDos) {
+    currentDay();
+    updateToDo();
     for (var i = 0; i < toDos.length; i++) {
         if (currentHour() > i + workStartAt || currentHour() > 17) {
             toDos[i].classList.remove("future", "present");
@@ -35,7 +37,7 @@ function updateToDo() {
     if (localStorage.length > 0) {
         for (var i = 0; i < localStorage.length; i++){
             var n = parseInt((localStorage.key(i)));
-            // Check if key is one of our key
+            // Filter strayed content of localStorage
             if (n > -1 && n < workHours) {
                 toDoList[n].value = localStorage.getItem(localStorage.key(i));
             }
@@ -46,27 +48,18 @@ function updateToDo() {
 // Save the "To Do" in the localStorage when save button is clicked
 function saveListener () {
     $("i").click(function() {
-        for (var i=0;i<9;i++){
-            var btnIndex = parseInt($(event.target).text());
-            if (i === btnIndex) {
-                if (toDoList[i].value){
-                    localStorage.setItem(i, toDoList[i].value);
-                }
-            }
-        }
+        var btnIndex = parseInt($(event.target).text());
+        localStorage.setItem(btnIndex, toDoList[btnIndex].value);
     });
 }
 
 // Starting our app
 $(document).ready(function() {
-    currentDay();
     checkSchedule(toDoList);
-    updateToDo();
     saveListener();
    
-    // Check every 5 minutes
+    // Update every 5 minutes
     setInterval(function() {
-        currentDay();
         checkSchedule(toDoList);    
     }, (1000 * 60) * 5);
 });

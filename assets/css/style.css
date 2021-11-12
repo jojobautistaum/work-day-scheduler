@@ -22,10 +22,6 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 #work-hour textarea {
   text-align: right;
   border-top: 1px solid black;
@@ -78,6 +74,6 @@ textarea, i {
 }
 
 span {
-  /* hidden button index */
+  /* hide save button indexes */
  font-size: 0;
 }
