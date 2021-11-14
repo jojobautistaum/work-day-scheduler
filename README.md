@@ -17,10 +17,11 @@ This App is used to list "to dos" or activities for the day with work hours betw
 * Work day start at 9:00 AM and ends at 5:00 PM.
 * Time blocks are color-coded when it is past, current or future hour.
 * Save the list in the localStorage when save button is clicked in the corresponding hours.
+* Use localStorage to store and retrieve list of "to dos"
 
-## Screenshots
-* Screen 1 <br/> ![Page 1](./assets/images/screen1.jpg)
-* Screen 2 <br/> ![Page 2](./assets/images/screen2.jpg)
+## Screenshot
+![Page 1](./assets/images/screenshot.jpg)
+
 
 ## Work Day Scheduler App Link
 [Check what is up for today](https://jojobautistaum.github.io/work-day-scheduler/)

@@ -12,7 +12,7 @@ function currentHour() {
     return moment().hour();
 }
 
-// Update our "to do" list
+// Update our "to do" list and date every 5 minutes
 function checkSchedule (toDos) {
     currentDay();
     updateToDo();
